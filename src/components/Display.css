@@ -1,0 +1,11 @@
+.display-container
+{
+    width: 75vw;
+    height: 75vh;
+    background-color:#D9D9D920;
+    position: absolute;
+    top:7rem;
+    left: 19rem;
+    border-radius: 10px;
+
+}

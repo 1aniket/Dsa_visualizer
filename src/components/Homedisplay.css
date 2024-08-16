@@ -1,0 +1,38 @@
+.homedisplay-container
+{
+    font-family: "Ubuntu", sans-serif;
+    padding: 10px 20px;
+}
+.homedisplay-container .title
+{
+    font-size:2rem;
+    color: orangered;
+    font-weight: 500;
+
+}
+.subtitle
+{
+    font-family: "Sofia Sans", sans-serif;
+    font-size: larger !important;
+    color: orange !important;
+    font-weight: 400;
+
+}
+
+.list
+{
+    padding: 20px 30px;
+    margin: 10px 20px;
+}
+.list-item
+{
+
+    margin: 1rem 1rem;
+    font-size: medium;
+    color: aliceblue;
+
+}
+.tagline
+{
+    margin-top: 1rem;
+}
