@@ -3,7 +3,7 @@ function delay(ms) {
 }
 
 
-const bubbleSort = async (barProperty, setBarProperty , time) => {
+const bubbleSort = async (barProperty, setBarProperty ) => {
   
   let array = barProperty;
 
@@ -39,7 +39,7 @@ const bubbleSort = async (barProperty, setBarProperty , time) => {
         array=y
 
       
-      await delay(time);
+      await delay(400);
       //console.log(barProperty)
       
 
@@ -95,7 +95,7 @@ const bubbleSort = async (barProperty, setBarProperty , time) => {
     })
       
       setBarProperty(z)
-    await delay(time);
+    await delay(400);
     }
   }
 
