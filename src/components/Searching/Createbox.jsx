@@ -1,10 +1,10 @@
-import GenerateRandomNumber from "./GenerateRandomNumber";
+import GenerateRandomNumber from "../Utils/GenerateRandomNumber";
 import { generatePath } from "react-router-dom";
 
 export const Createbox = ({ array, setKey }) => {
   const arr = [];
   let a = 0;
- // console.log(array);
+ //console.log(array);
   
   return array ? (
     <>

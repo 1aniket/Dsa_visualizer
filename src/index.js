@@ -3,8 +3,10 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Homedisplay from "./components/Homedisplay";
-import Searching from "./components/Searching";
+import Searching from "./components/Searching/Searching";
 import { Errorelement } from "./components/Errorelement";
+import Sorting from "./components/Sorting/Sorting";
+
 
 const rootElement = document.getElementById("root");
 
@@ -26,6 +28,7 @@ const Approutes = createBrowserRouter([
       },
       {
         path:"sorting",
+        element:<Sorting/>,
         errorElement:<Errorelement/>
       }
     ],

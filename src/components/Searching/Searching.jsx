@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./Searching.css";
 import { Createbox } from "./Createbox";
-import GenerateRandomNumber from "./GenerateRandomNumber";
-import GetKey from "./Getkey";
+import GenerateRandomNumber from "../Utils/GenerateRandomNumber";
+import GetKey from "../Utils/Getkey";
 import LinearSearch from "./LinearSearch";
 import toast, { Toaster } from "react-hot-toast";
+import BinarySearch from "./BinarySearch";
 
 const Searching = () => {
   const handleChange = (val) => {
@@ -28,10 +29,12 @@ const Searching = () => {
   const [btnState, setBtnState] = useState(false);
   const [target, setTarget] = useState(0);
   const [lsChecked, setLsChecked] = useState();
+  const [BsChecked , setBsChecked]= useState();
+  let time=0;
 
   return (
     <div className="searching-container">
-      <Toaster position="top-right" />
+      <Toaster position="top-center" />
       <div className="row1">
         <div className="left-side">
           <div className="searching-options">
@@ -53,8 +56,8 @@ const Searching = () => {
                 name="BS"
                 className="bs-btn"
                 onChange={(e) => {
-                  setLsChecked(e.target.checked);
-                  console.log(lsChecked);
+                  setBsChecked(e.target.checked);
+                  
                 }}
               />
               <span>Binary Search</span>{" "}
@@ -75,12 +78,7 @@ const Searching = () => {
           </div>
         </div>
         <div className="right-side">
-          <p>
-            Time Complexity : <span className="value"> O(N)</span>
-          </p>
-          <p>
-            Space Complexity : <span className="value"> O(1)</span>
-          </p>
+         
         </div>
       </div>
       <div className="row2">
@@ -98,11 +96,22 @@ const Searching = () => {
             <button
               disabled={btnState}
               onClick={() => {
-                return lsChecked && target
-                  ? LinearSearch(nums, setNums, setBtnState, target)
-                  : toast.error("Select an Option Or enter the target", {
+                if( lsChecked && target ){
+                  return LinearSearch(nums, setNums, setBtnState, target , time)
+                  
+                }
+                if(BsChecked && target)
+                {
+                  return BinarySearch(nums , setNums , setBtnState , target , time)
+                }
+                
+                  toast.error("Select an Option Or enter the target", {
                       position: "top-center",
                     });
+                
+
+                // if()
+                
               }}
             >
               Search

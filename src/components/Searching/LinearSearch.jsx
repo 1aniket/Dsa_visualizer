@@ -8,17 +8,19 @@ const notifyS = () =>
   toast.success("The number found", { position: "top-center", icon: "🎉" });
 const notifyW = () =>
   toast.error("The number not found", { position: "top-center" });
+async function updateBoxProperty(nums, setNums, setBtnState, target ) {
 
-async function updateBoxProperty(nums, setNums, setBtnState, target) {
+  console.log(nums)
   for (let i = 0; i < nums.length; i++) {
-    await delay(500);
-    console.log(target);
+    await delay(500)
+    
+    
 
     if (nums[i].number == target) {
       console.log(nums[i].number);
       setNums((prevNums) =>
         prevNums.map((box) =>
-          box.id === nums[i].id ? { ...box, property: "succeess" } : box
+          box.id === nums[i].id ? { ...box, property: "succeess" } :{...box, property: "dim"}
         )
       );
       notifyS();
@@ -38,8 +40,11 @@ async function updateBoxProperty(nums, setNums, setBtnState, target) {
       property: "wrong",
     }))
   );
+
+  
   notifyW();
 }
+
 const LinearSearch = (nums, setNums, setBtnState, target) => {
   updateBoxProperty(nums, setNums, setBtnState, target);
 };

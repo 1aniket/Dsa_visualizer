@@ -1,0 +1,283 @@
+.sorting-container
+{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    overflow: hidden;
+    font-family: "Sofia Sans", sans-serif;
+    color: white !important;
+}
+.row1
+{
+    width: 100%;
+    height: 30%; 
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    overflow: visible !important;
+   
+}
+.left 
+{
+    width: 50%;
+    border-radius: 10px;
+    padding:0 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+    
+}
+.right
+{
+    margin-left: 10px;
+    width: 50%;
+    border-radius: 10px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #80808050;
+    align-items: center;
+    justify-content: center;
+}
+.drop-down
+{
+    display: flex;
+    width: 100%;
+    height: 50%;
+    background-color: #80808050;
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    color: orange;
+    font-size: larger;
+   
+   
+}
+
+.range
+{
+    width: 100%;
+    height: 50%;
+    border-radius: 10px;
+    padding: 10px 20px;
+    justify-content:space-between;
+    background-color: #80808050;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+.range input
+{
+    display: flex;
+    width: 65%;
+    margin-left: auto;
+}
+.range span
+{
+    display: flex;
+}
+.row2-sorting
+{
+    display: flex;
+    width: 100%;
+    height:70% ;
+    padding: 10px;
+    background-color: transparent;
+}
+.display
+{
+    height: 100%;
+    width: 100%;
+    background-color: #80808050;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: end;
+    overflow: hidden;
+}
+
+.color
+{
+    display: flex;
+    width: 50px;
+    background-color: #80808050;
+    height: 100px;
+}
+
+.note
+{
+    display: flex;
+    align-self: center;
+}
+.sorting-btn
+{
+    display: flex;
+    align-self: flex-start;
+    position: absolute;
+    right:7%;
+    top: 35%;
+    width: 7%;
+    background-color: orangered;
+    outline: none;
+    border: none;
+    text-align: center;
+    height: 8%;
+    border-radius: 10px;
+    padding: 10PX;
+    font-family: "Sofia Sans", sans-serif;
+    font-size: large;
+    justify-content: center;
+    align-items: center;
+}
+
+.normal-bar
+{
+    
+    background-color: #D9D9D9;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s ease-in-out linear;
+
+}
+.selected-bar
+{
+    
+    background-color: red;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s ease-in-out linear;
+   
+
+}
+.swapping-bar
+{
+    
+    background-color:blue;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s ease-in-out linear;
+
+}
+.drop-down
+{
+    
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+    width: 100%;
+    background-color: yellow;
+    justify-content: center;
+    align-items: center;
+}
+.drop-down-btn
+{
+    display: flex;
+    background-color: red;
+    width: 100%;
+    height: 100%;
+    border: none;
+    justify-content: center;
+    align-content: center;
+    
+}
+.drop-down-content
+{
+     position: absolute;
+     display: flex;
+     top: 15%;
+    flex-direction: column;
+    background-color: blue;
+    width: 45%;    
+    
+}
+.option
+{
+    
+    border-radius: 10px;
+    width: 50%;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    position: relative;
+    
+   
+}
+
+.select-sort
+{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    justify-content: space-between;
+}
+.sorting-options
+{
+    display: flex;
+    gap: 10px;
+    height: 50%;
+    
+}
+.option
+{
+    
+    border-radius: 10px;
+    width: 50%;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    position: relative;
+    
+   
+}
+.bs-btn , .ss-btn
+{
+   width: 100%;
+   height: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-size: 2rem;
+    padding: 0.1rem;
+    background-color: #FFA500;
+   
+    border-radius: 0.5rem;   
+
+    
+}
+.option span
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top:-70%;
+    transform: translateY(70%);
+    width: fit-content;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white ;
+    
+}
+.bs-btn:hover, .bs-btn:checked ,.ss-btn:hover , .ss-btn:checked 
+{
+    background-color: #80808050;
+   
+    
+}
